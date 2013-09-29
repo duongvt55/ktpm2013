@@ -5,8 +5,8 @@ def detect_triangle(a, b, c):
 	e = 1e-9
 	if type(a)!=float or type(b)!=float or type(c)!=float :
 		return "Nhap sai kieu du lieu."
-	elif a<=0 or b<=0 or c<=0 or a>2**32-1 or b>2**32-1 or c>2**32-1 :
-		return "Nhap cac gia tri > 0 va <= 2^32-1."
+	elif a<0 or b<0 or c<0 or a>2**32-1 or b>2**32-1 or c>2**32-1 :
+		return "Nhap cac gia tri >= 0 va <= 2^32-1."
 	else:
 		temp = a
 		a = max(a,b,c)

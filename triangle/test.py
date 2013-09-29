@@ -7,9 +7,9 @@ class TriangleTest(unittest.TestCase):
 	def test_1(self) :
 		self.assertEqual(detect_triangle('1.0',1.2,3.1), "Nhap sai kieu du lieu.")
 	def test_2(self) :
-		self.assertEqual(detect_triangle(0.0,1.2,3.1), "Nhap cac gia tri > 0 va <= 2^32-1.")
+		self.assertEqual(detect_triangle(-1.0,1.2,3.1), "Nhap cac gia tri >= 0 va <= 2^32-1.")
 	def test_3(self) :
-		self.assertEqual(detect_triangle(float(2**32),32.1,3.1), "Nhap cac gia tri > 0 va <= 2^32-1.")
+		self.assertEqual(detect_triangle(float(2**32),32.1,3.1), "Nhap cac gia tri >= 0 va <= 2^32-1.")
 	def test_4(self) :
 		self.assertEqual(detect_triangle(float(2**32-1),43.3,34.1), "Day khong phai tam giac")
 	def test_5(self) :
